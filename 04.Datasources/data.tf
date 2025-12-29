@@ -19,3 +19,18 @@ data "aws_security_group" "selected" {
 output "sgid"{
     value = data.aws_security_group.selected.id
 }
+
+data "aws_ami" "example" {
+  most_recent      = true
+  name_regex       = "Centos-8-DevOps-Practice"
+  owners           = ["950538586636"]
+
+}
+
+output "ami"{
+    value = data.aws_ami.example.id
+}
+
+provider "aws"{
+    region ="us-east-1"
+}
