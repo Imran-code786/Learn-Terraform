@@ -46,5 +46,5 @@ Name = "var.name"
 
 variable "name"{}
 
-output "public_ip"
+
 
