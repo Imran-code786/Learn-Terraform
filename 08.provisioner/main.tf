@@ -17,10 +17,10 @@ provisioner "remote-exec" {
     }
     inline = [
       "sudo yum install -y nginx || sudo dnf install -y nginx",
-    "sudo systemctl enable nginx",
-    "sudo systemctl start nginx || true",
-    "sleep 5",
-    "sudo systemctl status nginx --no-pager",
+      "sudo systemctl enable nginx",
+      "sudo systemctl start nginx || true",
+      "sleep 5",
+      "sudo systemctl status nginx --no-pager",
       "sudo labauto ansible",
       "ansible-pull -i localhost, -U https://github.com/Imran-code786/roboshop-ansible main.yml -e env=dev -e role_name=frontend"
     ]
