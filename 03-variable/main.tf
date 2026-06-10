@@ -10,12 +10,12 @@ variable "imran" {
   default = "Noor jahan"
 }
 
-variable "z"{
+variable "z" {
   default = false
 }
 
 variable "example1" {
-  default = [1,"a",false,2]
+  default = [1, "a", false, 2]
 }
 
 variable "example2" {
@@ -25,7 +25,7 @@ variable "example2" {
     c = "bar"
   }
 }
-output "map"{
+output "map" {
   value = var.example2["b"]
 }
 
@@ -42,7 +42,7 @@ output "khan" {
   value = var.imran
 }
 
-output "x"{
+output "x" {
   value = "x is  ${var.x}"
 }
 

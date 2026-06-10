@@ -1,6 +1,6 @@
 resource "aws_instance" "Name" {
-  ami = "ami-0220d79f3f480ecf5"
-  instance_type = "t3.small"
+  ami                    = "ami-0220d79f3f480ecf5"
+  instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-04692f74cd3fa91ac"]
 
   tags = {
@@ -9,9 +9,9 @@ resource "aws_instance" "Name" {
 }
 
 resource "null_resource" "test" {
-    triggers = {
-      always = timestamp()
-    }
+  triggers = {
+    always = timestamp()
+  }
 
   provisioner "remote-exec" {
     connection {
@@ -22,10 +22,10 @@ resource "null_resource" "test" {
 
     }
 
-    inline  =  [
-       "echo Hello >/tmp/some",
-        "echo Hello >/tmp/some123",
-         "echo Hello >/tmp/imran"
+    inline = [
+      "echo Hello >/tmp/some",
+      "echo Hello >/tmp/some123",
+      "echo Hello >/tmp/imran"
     ]
   }
 }

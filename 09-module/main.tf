@@ -1,8 +1,8 @@
 module "sample" {
-  source = "./sample"
-  message  = var.message
-  a  = var.a
-  b  = var.b
+  source  = "./sample"
+  message = var.message
+  a       = var.a
+  b       = var.b
 }
 
 variable "message" {

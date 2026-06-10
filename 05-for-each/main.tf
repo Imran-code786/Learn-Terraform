@@ -2,8 +2,8 @@ resource "null_resource" "test1" {
   for_each = var.output
 
   triggers = {
-     khan = each.key
-     value = each.value
+    khan  = each.key
+    value = each.value
   }
 }
 

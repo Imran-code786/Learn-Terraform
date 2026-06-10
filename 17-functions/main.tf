@@ -26,7 +26,7 @@ output "some_join" {
 }
 
 output "some_split" {
-  value = split(" ",var.some)
+  value = split(" ", var.some)
 }
 
 output "some_replace" {
